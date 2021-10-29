@@ -17,7 +17,7 @@ export default function App() {
   const [storedCredentials, setStoredCredentials] = useState("");
 
   const checkLoginCredentials = () => {
-    AsyncStorage.getItem('flowerCribCredentials')
+    AsyncStorage.getItem('R9')
       .then((result) => {
         if (result !== null) {
           setStoredCredentials(JSON.parse(result));

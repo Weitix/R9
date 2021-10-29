@@ -33,7 +33,7 @@ const Welcome = () => {
     : require('./../assets/img/expo-bg1.png');
 
   const clearLogin = () => {
-    AsyncStorage.removeItem('flowerCribCredentials')
+    AsyncStorage.removeItem('R9')
       .then(() => {
         setStoredCredentials("");
       })
