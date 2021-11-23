@@ -50,7 +50,6 @@ import { CredentialsContext } from './../components/CredentialsContext';
 const Signup = ({ navigation }) => {
   const [hidePassword, setHidePassword] = useState(true);
   const [show, setShow] = useState(false);
-  const [date, setDate] = useState(new Date(2000, 0, 1));
   const [message, setMessage] = useState();
   const [messageType, setMessageType] = useState();
 
@@ -64,9 +63,6 @@ const Signup = ({ navigation }) => {
     setDob(currentDate);
   };
 
-  const showDatePicker = () => {
-    setShow('date');
-  };
 
     // credentials context
     const {storedCredentials, setStoredCredentials} = useContext(CredentialsContext);
@@ -94,6 +90,12 @@ const Signup = ({ navigation }) => {
         console.log(error.toJSON());
       });
   };
+
+
+
+
+
+
 
   const handleMessage = (message, type = '') => {
     setMessage(message);

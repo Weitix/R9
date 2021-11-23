@@ -24,7 +24,7 @@ const Welcome = ({navigation}) => {
   // credentials context
   const { storedCredentials, setStoredCredentials } = useContext(CredentialsContext);
 
-  const { name, email,roles } = storedCredentials;
+  const { name, email,roles ,quiz} = storedCredentials;
 
 
   const clearLogin = () => {
@@ -45,7 +45,7 @@ const Welcome = ({navigation}) => {
           <PageTitle welcome={true}>Добро пожаловать</PageTitle>
           <SubTitle welcome={true}>{name || 'Olga Simpson'}</SubTitle>
           <SubTitle welcome={true}>{email || 'olgasimp@gmail.com'}</SubTitle>
-          <SubTitle welcome={true}>{roles}</SubTitle>
+          <SubTitle welcome={true}>Ваша роль {roles}</SubTitle>
           <StyledFormArea>
             <Line />
             <StyledButton onPress={() => navigation.navigate('Home')}>
